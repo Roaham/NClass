@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+}
+
+img {
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+img:hover {
+    transform: scale(1.1);
+}

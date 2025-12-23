@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Formulario de prueba">
+        <meta name="viewport" content="width=device-width, initial-scale=0.75">
+        <link rel = "stylesheet" href = "test4.css">
+        <title>Test5</title>
+    </head>
+    <body>
+        <form action="test6.html" method="get">
+            <div>
+                <h1>Crear tu cuenta de Potatolandia</h1>
+                <h3>Solo necesitas una cuenta de Potatolandia para acceder a todos los servicios de Potatolandia.</h3>
+                <h3>¿Ya tienes una cuenta de Potatolandia? <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DvgiBuoVRt0Y&psig=AOvVaw1j3E6wvpyfMqcC7SeYzLWf&ust=1760777430362000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLC0pJ_tqpADFQAAAAAdAAAAABAE">Iniciar sesión -></a></h3>
+                <div class="name">
+                    <input name="name" id="name" type="text" minlength="3" required placeholder="Nombre">
+                    <input name="surname" id="surname" type="text" minlength="3" required placeholder="Apellidos">
+                </div>
+                <div>
+                    <label for="email">Correo</label>
+                    <input name="email" id="email" type="email" required placeholder="name@example.com">
+                </div>
+                <div>
+                    <label for="password">Contraseña</label><span title="Mínimo 8 dígitos con una Mayúscula, una Minúscula y un Número" style="cursor: help;">❓</span>
+                    <input name="password" id="password" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="password">
+                </div>
+                <div>
+                    <label for="birthdate">Fecha de Nacimiento</label>
+                    <input name="birthdate" id="birthdate" type="date" required>
+                </div>
+                <div class="place">
+                    <input name="direction" id="direction" type="text" placeholder="Dirección" required>
+                    <input name="postalcode" id="postalcode" type="text" placeholder="Código Postal" pattern="^[0-9]{5,}$">
+                </div>
+                <div>
+                    <label for="city">Ciudad</label>
+                    <input name="city" id="city" type="text" required>
+                </div>
+                <div>
+                    <label for="province">Provincia</label>
+                    <select name="province" id="province">
+                        <option value="">Selecciona una Provincia</option>
+                        <option value="ma">Madrid</option>
+                        <option value="ba">Barcelona</option>
+                        <option value="la">Málaga</option>
+                        <option value="va">Valencia</option>
+                        <option value="bi">Vizcaya</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="telf">Téléfono</label>
+                    <input name="telf" id="telf" type="text" pattern="^[0-9]{9,}$">
+                </div>
+                <div> 
+                    <fieldset>
+                    <label for="masculino">Masculino</label>
+                    <input name="gender" id="masculino" type="radio" required>
+                    
+                    <label for="femenino">Femenino</label>
+                    <input name="gender" id="femenino" type="radio">
+
+                    <label for="void">Prefiero No Contestar</label>
+                    <input name="gender" id="void" type="radio">
+                    </fieldset>
+                </div>
+                <div>
+                    <label for="paidmethod">Método de pago preferido</label>
+                    <select name="paidmethod" id="paidmethod">
+                        <option value="Targeta">Targeta</option>
+                        <option value="Bizum">Bizum</option>
+                        <option value="PayPal">PayPal</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="CV">Envia tu CV</label>
+                    <input name="CV" id="CV" type="file">
+                </div>
+                <div>
+                    <label for="comments">Comentarios adicionales</label>
+                    <textarea name="comments" id="comments"></textarea>
+                    <label>Comentarios adicionales</label>
+                </div>
+                <div>
+                    <input name="spam" type="checkbox" id="spam">
+                    <label for="spam">Acepto el Spam</label>
+
+                    <input name="therms" type="checkbox" id="therms" required>
+                    <label for="therms"><a>Términos y condicionese</a></label>
+                </div>
+                <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

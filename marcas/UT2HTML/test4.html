@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Formulario de prueba">
+        <link rel = "stylesheet" href = "test4.css"></link>
+        <title>Test4</title>
+    </head>
+    <body>
+        <h1>Formulario de Registro</h1>
+        <form action="procesar.php" method="post">
+            <p>
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" required>
+            <p>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" name="contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <!-- (?=.*\d) → al menos un número, (?=.*[a-z]) → al menos una minúscula, (?=.*[A-Z]) → al menos una mayúscula, .{8,} → longitud mínima de 8 caracteres -->
+            <p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" required>
+            <p>
+                <label for="apellido">Apellidos:</label>
+                <input type="text" name="apellido" required>
+            <p>
+                <label for="fecha de nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" name="fecha de nacimeinto" required>
+            <p>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" name="correo" required placeholder="Ej: micorreo@example.com">
+            <p>
+                <label for="direccion">Dirección:</label>
+                <input type="text" name="direccion" required>
+            <p>
+                <label for="codigo postal">Código Postal:</label>
+                <input type="number" name="codigo postal" max="5">
+            <p>
+                <label for="Ciudad">Ciudad:</label>
+                <input type="text" name="Ciudad" required>
+            <p>
+                <label for="provincia">Provincia:</label>
+                <select name="provincia">
+                    <option value="">Selecciona un País</option>
+                    <option value="ma">Madrid</option>
+                    <option value="ba">Barcelona</option>
+                    <option value="gi">Girona</option>
+                    <option value="ta">Tarragona</option>
+                    <option value="le">Lleida</option>
+            <p>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" name="telefono" minlength="9">
+            <p>
+                <label for="genero">Masculino:</label>
+                <input type="radio" id="masculino" name="genero">
+                <label for="genero">Femenino:</label>
+                <input type="radio" id="femenino" name="genero">
+                <label for="genero">Prefiero no contestar:</label>
+                <input type="radio" id="void" name="genero">
+            <p>
+                <label for="preferencias">Newsletter:</label>
+                <input type="checkbox" name="preferencias">
+                <label for="preferencias">Promociones:</label>
+                <input type="checkbox" name="preferencias">
+                <datalist>
+                    <option value="Targeta"></option>
+                    <option value="Bizum"></option>
+                    <option value="Paypal"></option>
+                </datalist>
+            <p>
+                <label for="codigo postal">Código Postal:</label>
+                <input list="metodos" name="codigo postal" max="5">
+            <p>
+                <label for="codigo postal">Código Postal:</label>
+                <input type="number" name="codigo postal" max="5">
+            <p>
+                <label for="codigo postal">Código Postal:</label>
+                <input type="number" name="codigo postal" max="5">
+            <p>
+                <button>Submit</button>
+                <button>Reset</button>
+            </p>
+        </form>
+    </body>
+</html>

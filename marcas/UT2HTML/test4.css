@@ -1,0 +1,49 @@
+body {
+    background-color: rgba(245, 245, 245, 0.356);
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    max-width: 400px;
+    width: 100%;
+}
+input, select, textarea, button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    align-items: center;
+}
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+input[type="radio"] {
+    width: 8%;
+}
+input[type="checkbox"] {
+    width: 10%;
+}
+.name {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+.place {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+}

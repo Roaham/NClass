@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    list-style-type: upper-roman;
+    color: blue;
+    gap: 10px;
+    border: 2px solid black;
+}
+
+li:hover {
+    color: green;
+}
