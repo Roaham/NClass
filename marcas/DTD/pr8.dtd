@@ -1,0 +1,9 @@
+    <!ELEMENT especie (nombre, familia, distribucion)>
+    <!ATTLIST especie
+        estado (extinto | amenazado | sin-peligro) #IMPLIED>
+    <!ELEMENT distribucion (zona+)>
+    <!ELEMENT zona (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ATTLIST nombre
+        nombre-cientifico CDATA #REQUIRED>
+    <!ELEMENT familia (#PCDATA)>

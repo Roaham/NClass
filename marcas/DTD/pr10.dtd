@@ -1,0 +1,5 @@
+<!ELEMENT videojuego (titulo, genero+)>
+<!ATTLIST videojuego
+    titulo CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>

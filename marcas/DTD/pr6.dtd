@@ -1,0 +1,9 @@
+    <!ELEMENT pedido (cliente, direccion, items)>
+    <!ELEMENT items (item+)>
+    <!ELEMENT item (nombre, precio)>
+    <!ATTLIST item
+        numero CDATA #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT cliente (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>

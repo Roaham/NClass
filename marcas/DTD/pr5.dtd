@@ -1,0 +1,6 @@
+    <!ELEMENT billete (pasajero, origen, destino, fecha?, hora)>
+    <!ELEMENT pasajero (#PCDATA)>
+    <!ELEMENT origen (#PCDATA)>
+    <!ELEMENT destino (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT hora (#PCDATA)>

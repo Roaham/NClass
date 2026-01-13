@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE billete SYSTEM "pr5.dtd">
+<billete>
+    <pasajero>Alfredo Pujol</pasajero>
+    <origen>Josep Tarradellas Barcelona El Prat</origen>
+    <destino>Madrid Barajas Adolfo Suárez </destino>
+    <fecha>03-09-2023</fecha>
+    <hora>14:20:00</hora>
+</billete>

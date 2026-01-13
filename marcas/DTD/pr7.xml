@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE receta SYSTEM "pr7.dtd">
+<receta racionesNum="" dificultad="media">
+    <nombre></nombre>
+    <ingredientes>
+        <ingrediente cantidad=""></ingrediente>
+    </ingredientes>
+    <instrucciones></instrucciones>
+</receta>
