@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="tipoCIF">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]-[0-9]{8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoCP">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoImporte">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="factura">
+    <xs:complexType>
+      <xs:sequence>
+        
+        <xs:element name="emisor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="cif" type="tipoCIF"/>
+              <xs:element name="direccion" type="xs:string"/>
+              <xs:element name="poblacion" type="xs:string"/>
+              <xs:element name="cp" type="tipoCP"/>
+              <xs:element name="telefono" type="xs:string"/>
+              <xs:element name="fax" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="cliente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="direccion_envio" type="xs:string"/>
+              <xs:element name="poblacion" type="xs:string"/>
+              <xs:element name="cp" type="tipoCP"/>
+              <xs:element name="provincia" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="n_cliente" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="datos_factura">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fecha" type="xs:date"/>
+              <xs:element name="forma_pago" type="xs:string"/>
+              
+              <xs:element name="lineas">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="linea" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ref" type="xs:string"/>
+                          <xs:element name="descripcion" type="xs:string"/>
+                          <xs:element name="cantidad" type="xs:integer"/>
+                          <xs:element name="precio_unitario" type="tipoImporte"/>
+                          <xs:element name="igv_porcentaje" type="xs:decimal"/>
+                          <xs:element name="importe" type="tipoImporte"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="resumen">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="base_imponible" type="tipoImporte"/>
+                    <xs:element name="igv_total" type="xs:decimal"/>
+                    <xs:element name="cuota_igv" type="tipoImporte"/>
+                    <xs:element name="total_factura" type="tipoImporte"/>
+                  </xs:sequence>
+                  <xs:attribute name="moneda" type="xs:string" fixed="eur"/>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+            <xs:attribute name="n_pedido" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+      <xs:attribute name="numero" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
