@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="factura">
 
+    <xs:simpleType name="tipoCif">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]-[0-9]{8}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoCP">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{5}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoPhone">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{9}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="factura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fecha" type="xs:date"/>
+                <xs:element name="numeroPedido" type="xs:string"/>
+                <xs:element name="forma_pago" type="xs:string"/>
+                <xs:element name="emisor">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="empresa" type="xs:string"></xs:element>
+                            <xs:element name="direccion" type="xs:string"></xs:element>
+                            <xs:element name="ciudad" type="xs:string"></xs:element>
+                            <xs:element name="CP" type="tipoCP"></xs:element>
+                            <xs:element name="cif" type="tipoCif"></xs:element>
+                            <xs:element name="telefono" type="tipoPhone"></xs:element>
+                            <xs:element name="fax" type="xs:string"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="cliente">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="numeroCliente" type="xs:integer"></xs:element>
+                            <xs:element name="nombre" type="xs:string"></xs:element>
+                            <xs:element name="direccionEnvio" type="xs:string"></xs:element>
+                            <xs:element name="poblacion" type="xs:string"></xs:element>
+                            <xs:element name="CP" type="tipoCP"></xs:element>
+                            <xs:element name="provincia" type="xs:string"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="datos" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="referencia" type="xs:string"></xs:element>
+                            <xs:element name="descripcion" type="xs:string"></xs:element>
+                            <xs:element name="cantidad" type="xs:integer"></xs:element>
+                            <xs:element name="precio" type="xs:decimal"></xs:element>
+                            <xs:element name="IGV" type="xs:decimal"></xs:element>
+                            <xs:element name="importe" type="xs:decimal"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="resumen">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="baseImponible" type="xs:decimal"></xs:element>
+                            <xs:element name="porcentajeIGV" type="xs:decimal"></xs:element>
+                            <xs:element name="cuotaIGV" type="xs:decimal"></xs:element>
+                            <xs:element name="totalFactura" type="xs:decimal"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
     </xs:element>
 </xs:schema>

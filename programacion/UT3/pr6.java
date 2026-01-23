@@ -24,12 +24,12 @@ public class pr6 {
 
         if (validate(word)) {
             for (int i = 0; i < phrase.length(); i++) {
-            int j = phrase.indexOf(word, i);
+                int j = phrase.indexOf(word, i);
 
-            if (j != -1) {
-                count++;
+                if (j != -1) {
+                    count++;
+                }
             }
-        }
         System.out.printf("Tu palabra aparece %d veces", count / word.length());
         }
     }
