@@ -1,0 +1,8 @@
+"java.debug.settings.enableHotCodeReplace": false,
+"java.configuration.runtimes": [
+    {
+        "name": "JavaSE-25",
+        "path": "/home/roaham/oracleJdk-25/oracleJdk-25",
+        "default": true
+    }
+]
