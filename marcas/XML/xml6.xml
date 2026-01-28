@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd6.xsd">
+    
+    <cliente>Juan Pérez</cliente>
+    <direccion>Calle Mayor 15, Madrid</direccion>
+    
+    <items>
+        <item>
+            <nombre>Teclado Mecánico</nombre>
+            <precio>85.50</precio>
+        </item>
+    </items>
+
+</pedido>

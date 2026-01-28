@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd1.xsd">
+           
+  <raton>
+    <codigo>RAT-01</codigo>
+    <descripcion>Óptico inalámbrico</descripcion>
+  </raton>
+
+  <teclado>
+    <codigo>TEC-02</codigo>
+    <descripcion>Mecánico RGB</descripcion> <peso>850g</peso> </teclado>
+
+</productos>

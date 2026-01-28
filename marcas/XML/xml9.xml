@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pelicula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd9.xsd">
+    
+    <titulo>Interstellar</titulo>
+    <director>Christopher Nolan</director>
+
+    <sinopsis>
+        Un grupo de exploradores viaja a través de un agujero de gusano en el espacio 
+        en un intento por asegurar la supervivencia de la humanidad.
+    </sinopsis>
+
+    <actores>Matthew McConaughey, Anne Hathaway, Jessica Chastain</actores>
+    <año>2014-11-07</año>
+    
+</pelicula>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<receta raciones="2" dificultad="media" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd7.xsd">
+    
+    <nombre>Pasta Carbonara Original</nombre>
+    
+    <elaboracion>
+        Cocer la pasta, mezclar las yemas con el queso y el guanciale frito, 
+        y combinar todo con un poco de agua de cocción.
+    </elaboracion>
+    
+    <ingredientes>
+        <ingrediente cantidad="200" unidad="gramos">Espaguetis</ingrediente>
+        <ingrediente cantidad="3" unidad="unidades">Yemas de huevo</ingrediente>
+        <ingrediente cantidad="100" unidad="gramos">Guanciale</ingrediente>
+        <ingrediente>Pimienta negra</ingrediente> </ingredientes>
+
+</receta>

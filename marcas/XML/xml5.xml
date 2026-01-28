@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<billete xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd5.xsd">
+
+    <pasajero>Andrés García</pasajero>
+    <origen>Madrid-Puerta de Atocha</origen>
+    <destino>Barcelona-Sants</destino>
+    <fecha>2026-05-15</fecha> <hora>14:30:00</hora>
+
+</billete>

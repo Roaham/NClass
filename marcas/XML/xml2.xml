@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listaventas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd2.xsd">
+    
+    <venta>
+        <importe>150.75</importe>
+        <comprador>Juan Pérez</comprador>
+        <vendedor>Ana García</vendedor>
+        <fecha>2026-01-28</fecha>
+        <codigo>10293</codigo>
+    </venta>
+
+</listaventas>

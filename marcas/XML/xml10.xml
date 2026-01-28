@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<videojuego titulo="ELDEN_RING_001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd10.xsd">
+    
+    <titulo>Elden Ring</titulo>
+    <genero>Acción</genero>
+    <genero>RPG</genero>
+    <genero>Mundo Abierto</genero>
+
+</videojuego>

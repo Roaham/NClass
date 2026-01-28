@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd4.xsd">
+    
+    <raton>
+        <codigo>101</codigo>
+        <nombre>Logitech G Pro</nombre>
+        <descripcion>Ratón inalámbrico para gaming</descripcion>
+    </raton>
+
+</productos>

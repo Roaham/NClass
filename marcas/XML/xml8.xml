@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<especie estado="amenazado" nombre_cientifico="Lynx pardinus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd8.xsd">
+    
+    <nombre>Lince Ibérico</nombre>
+    <familia>Felidae</familia>
+    
+    <distribución>
+        <zona>Península Ibérica</zona>
+    </distribución>
+
+</especie>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="receta">
+        <xs:complexType>
+            <xs:sequence>
+                
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="elaboracion" type="xs:string"/>
+                
+                <xs:element name="ingredientes">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="ingrediente" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="cantidad" type="xs:string" use="optional"/>
+                                            <xs:attribute name="unidad" type="xs:string" use="optional"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+
+            <xs:attribute name="raciones" type="xs:integer" use="required"/>
+            <xs:attribute name="dificultad" default="media">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="baja"/>
+                        <xs:enumeration value="media"/>
+                        <xs:enumeration value="alta"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
